@@ -10,23 +10,22 @@ function Display() {
     const [decimal, setDecimal] = useState('');
 
 
-
-
-    function handleConvert(){
+    const handleConvert = ()=>{
         console.log('Converted!!');
         const decimalValue =parseInt(binary,2);
-        
         setDecimal(decimalValue);
+        // setDecimal('');
+
     }
 
-    function handleChange(e){
+    const handleChange=(e)=>{
         const inputValue = e.target.value;
         if(!isNaN(inputValue) && /^[^23456789]+$/.test(inputValue)){
             setBinary(inputValue);
         }else{
             <Alert severity="error">This is an error alert — check it out!</Alert>
         }
-        
+        // setBinary('');
     }
 
 
